@@ -1,58 +1,56 @@
-{
-    "images": [
-        {
-            "imgPath": "img/1000000559.jpg",
-            "imgLocation": "Australia",
-            "description": "Loch Ard Gorge",
-            "date": "01/01/2016"
-        },
-        {
-            "imgPath": "img/1000000573.jpg",
-            "imgLocation": "Austria",
-            "description": "Austrian chapel",
-            "date": "01/02/2016"
-        },
-        {
-            "imgPath": "img/1000000639.jpg",
-            "imgLocation": "Paris",
-            "description": "Eiffel Tower",
-            "date": "01/03/2016"
-        },
-        {
-            "imgPath": "img/1000000993.jpg",
-            "imgLocation": "Greece",
-            "description": "Greek coastline",
-            "date": "01/04/2016"
-        },
-        {
-            "imgPath": "img/1000002707.jpg",
-            "imgLocation": "Hungary",
-            "description": "Budapest skyline",
-            "date": "01/05/2016"
-        },
-        {
-            "imgPath": "img/1000002859.jpg",
-            "imgLocation": "India",
-            "description": "Taj Mahal",
-            "date": "01/06/2016"
-        },
-        {
-            "imgPath": "img/1000002901.jpg",
-            "imgLocation": "Italy",
-            "description": "Venice",
-            "date": "01/07/2016"
-        },
-        {
-            "imgPath": "img/1000002794.jpg",
-            "imgLocation": "Japan",
-            "description": "Hirosaki Castle",
-            "date": "01/08/2016"
-        },
-        {
-            "imgPath": "img/nature.jpg",
-            "imgLocation": "South Korea",
-            "description": "Seoul",
-            "date": "01/09/2016"
-        }
-  ]
-}
+[
+  {
+    "imgPath": "img/1000000559.jpg",
+    "imgLocation": "Australia",
+    "description": "Loch Ard Gorge",
+    "date": "01/01/2016"
+  },
+  {
+    "imgPath": "img/1000000573.jpg",
+    "imgLocation": "Austria",
+    "description": "Austrian chapel",
+    "date": "01/02/2016"
+  },
+  {
+    "imgPath": "img/1000000639.jpg",
+    "imgLocation": "Paris",
+    "description": "Eiffel Tower",
+    "date": "01/03/2016"
+  },
+  {
+    "imgPath": "img/1000000993.jpg",
+    "imgLocation": "Greece",
+    "description": "Greek coastline",
+    "date": "01/04/2016"
+  },
+  {
+    "imgPath": "img/1000002707.jpg",
+    "imgLocation": "Hungary",
+    "description": "Budapest skyline",
+    "date": "01/05/2016"
+  },
+  {
+    "imgPath": "img/1000002859.jpg",
+    "imgLocation": "India",
+    "description": "Taj Mahal",
+    "date": "01/06/2016"
+  },
+  {
+    "imgPath": "img/1000002901.jpg",
+    "imgLocation": "Italy",
+    "description": "Venice",
+    "date": "01/07/2016"
+  },
+  {
+    "imgPath": "img/1000002794.jpg",
+    "imgLocation": "Japan",
+    "description": "Hirosaki Castle",
+    "date": "01/08/2016"
+  },
+  {
+    "imgPath": "img/nature.jpg",
+    "imgLocation": "South Korea",
+    "description": "Seoul",
+    "date": "01/09/2016"
+  }
+]
