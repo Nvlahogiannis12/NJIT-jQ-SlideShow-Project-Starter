@@ -1,5 +1,6 @@
-let mCurrentIndex = 0; // Tracks the current image index
+let mCurIndx = 0; // Tracks the current image index
 let mImages = []; // Array to hold GalleryImage objects
+let mObject = [];
 const mUrl = "images.json"; // Replace with actual JSON URL
 const mWaitTime = 5000; // Timer interval in milliseconds
 
@@ -17,11 +18,11 @@ $(document).ready(() => {
   });
 
   // Select the "Next Photo" button and add a click event to call showNextPhoto
-  $(".nextPhoto").on("click", function () {
+  $("#nextPhoto").on("click", function () {
     showNextPhoto();
   });
   // Select the "Previous Photo" button and add a click event to call showPrevPhoto
-  $(".prevPhoto").on("click", function () {
+  $("#prevPhoto").on("click", function () {
     showPrevPhoto();
   });
   // Call fetchJSON() to load the initial set of images
@@ -35,6 +36,7 @@ async function fetchJSON() {
   list = await list.json();
   list.forEach((item) => {
     mImages.push(item.imgPath);
+    mObject.push(item);
   });
   console.log(list, mImages);
   // On success, parse the JSON and push each image object into mImages array
@@ -44,22 +46,33 @@ async function fetchJSON() {
 
 // Function to swap and display the next photo in the slideshow
 function swapPhoto() {
-  // Access mImages[mCurrentIndex] to update the image source and details
-  $(`.thumbnail`).attr("src", mImages[mCurrentIndex]);
+  // Access mImages[mCurIndx] to update the image source and details
+  $(`.thumbnail`).attr("src", mImages[mCurIndx]);
+  const current = mObject[mCurIndx];
+  console.log(current);
   // Update the #photo element's src attribute with the current image's path
   // Update the .location, .description, and .date elements with the current image's details
+  $(`.location`).text(`Location: ${current.imgLocation}`);
+  $(`.description`).text(`Description: ${current.description}`);
+  $(`.date`).text(`${current.date}`);
 }
 
 // Advances to the next photo, loops to the first photo if the end of array is reached
 function showNextPhoto() {
-  // Increment mCurrentIndex and call swapPhoto()
-  // Ensure it loops back to the beginning if mCurrentIndex exceeds array length
+  // Increment mCurIndx and call swapPhoto()
+  // Ensure it loops back to the beginning if mCurIndx exceeds array length
+  mCurIndx++;
+  if (mCurIndx >= 9) mCurIndx = 0;
+  swapPhoto();
 }
 
-// Goes to the previous photo, loops to the last photo if mCurrentIndex goes negative
+// Goes to the previous photo, loops to the last photo if mCurIndx goes negative
 function showPrevPhoto() {
-  // Decrement mCurrentIndex and call swapPhoto()
-  // Ensure it loops to the end if mCurrentIndex is less than 0
+  // Decrement mCurIndx and call swapPhoto()
+  // Ensure it loops to the end if mCurIndx is less than 0
+  mCurIndx--;
+  if (mCurIndx <= -1) mCurIndx = 8;
+  swapPhoto();
 }
 
 // Starter code for the timer function
